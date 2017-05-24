@@ -1,0 +1,8 @@
+0.6
+2016.4
+Jan 23 2017
+19:19:20
+/home/marco/chirp_custom/chirp_custom.srcs/sim_1/new/dds_tb.vhd,1495636901,vhdl,,,,dds_tb,,,,,,,,
+/home/marco/chirp_custom/chirp_custom.srcs/sources_1/new/dds_sin_cos.vhd,1495636500,vhdl,/home/marco/chirp_custom/chirp_custom.srcs/sim_1/new/dds_tb.vhd,,,dds_sin_cos,,,,,,,,
+/home/marco/chirp_custom/chirp_custom.srcs/sources_1/new/luts.vhd,1495631574,vhdl,/home/marco/chirp_custom/chirp_custom.srcs/sources_1/new/dds_sin_cos.vhd,,,luts,,,,,,,,
+/home/marco/chirp_custom/chirp_custom.srcs/sources_1/new/mul_acc.vhd,1495636474,vhdl,/home/marco/chirp_custom/chirp_custom.srcs/sources_1/new/dds_sin_cos.vhd,,,mul_acc,,,,,,,,

@@ -29,19 +29,19 @@ int main() {
 
   }
 
-  coarse_inc = (2*M_PI)/(pow(2,((M_BITS/2)+1)));//incremento del coarse
-  fine_inc = (2*M_PI)/(pow(2, M_BITS));//incremento del fine
+  coarse_inc = (2*M_PI)/(pow(2,F_BITS));//incremento del coarse
+  fine_inc = coarse_inc/(pow(2, I_BITS));//incremento del fine
 
   printf("Coarse increment: %Lf\n", coarse_inc);
   printf("Fine increment: %.10Lf\n", fine_inc);
 
   spanner = 0;
   //cos coarse LUT generation
-  for (i=0; i<=(pow(2,(M_BITS/2)-1)-1); i++) {
+  for (i=0; i<=pow(2,M_BITS/2)-1; i++) {
     
     tmp = cos(spanner);
 
-    fprintf (cos_coarse_ptr, "%Lf,\n", tmp);
+    fprintf (cos_coarse_ptr, "%d,\n", (int)(tmp*(pow(2, 16)-1)));
 
     spanner += coarse_inc;
 
@@ -49,22 +49,22 @@ int main() {
   
   spanner = 0;
  //sin coarse LUT generation 
-  for (i=0; i<=(pow(2,(M_BITS/2)-1)-1); i++) {
+  for (i=0; i<=pow(2,M_BITS/2)-1; i++) {
     
     tmp = sin(spanner);
 
-    fprintf (sin_coarse_ptr, "%Lf,\n", tmp);
+    fprintf (sin_coarse_ptr, "%d,\n", (int)(tmp*(pow(2,16)-1)));
     spanner += coarse_inc;
 
   } 
   
   spanner = 0;
 //cos fine LUT generation
-  for (i=0; i<=pow(2,(M_BITS/2)-1)-1; i++) {
+  for (i=0; i<=pow(2,M_BITS/2)-1; i++) {
     
-    tmp = (1. - cos(spanner)) * pow(2,8);
+    tmp = cos(spanner);
 
-    fprintf (cos_fine_ptr, "%Lf,\n", tmp);
+    fprintf (cos_fine_ptr, "%d,\n", (int)(tmp*(pow(2,16)-1)));
 
     spanner += fine_inc;
 
@@ -72,11 +72,11 @@ int main() {
   
   spanner = 0;
   //sin fine LUT generation
-  for (i=0; i<=pow(2,(M_BITS/2)-1)-1; i++) {
+  for (i=0; i<=pow(2,M_BITS/2)-1; i++) {
     
-    tmp = sin(spanner) * pow(2,8);
+    tmp = sin(spanner);
 
-    fprintf (sin_fine_ptr, "%Lf,\n", tmp);
+    fprintf (sin_fine_ptr, "%d,\n", (int)(tmp*(pow(2,16)-1)));
 
     spanner += fine_inc;
 

@@ -1,0 +1,8 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/marco/chirp_custom/chirp_custom.srcs/sources_1/new/mul_acc.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity mul_acc
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/marco/chirp_custom/chirp_custom.srcs/sources_1/new/luts.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity luts
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/marco/chirp_custom/chirp_custom.srcs/sources_1/new/dds_sin_cos.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity dds_sin_cos
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/marco/chirp_custom/chirp_custom.srcs/sim_1/new/dds_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity dds_tb

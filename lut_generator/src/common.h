@@ -6,8 +6,8 @@
 #define SIN_FINE_FILE "sin_fine_lut.txt"
 #define COS_FINE_FILE "cos_fine_lut.txt"
 #define M_BITS 16 //Total bits
-#define F_BITS 9 // coarse bits
-#define I_BITS 7 // fine bits
+#define F_BITS 8 // coarse bits
+#define I_BITS 8 // fine bits
 
 FILE *sin_coarse_ptr, *cos_coarse_ptr;
 FILE *sin_fine_ptr, *cos_fine_ptr;
