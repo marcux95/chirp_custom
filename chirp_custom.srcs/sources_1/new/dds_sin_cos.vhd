@@ -28,7 +28,7 @@ signal cos_fine_data_s   : std_logic_vector (31 downto 0);
 
 begin
 
-LUT_I: entity work.luts port map (
+LUT_I: entity work.luts_0 port map (
                                     clk,
                                     
                                     sin_coarse_add_s,

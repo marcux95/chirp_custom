@@ -1,6 +1,6 @@
 Vivado Simulator 2016.4
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: /mnt/685a0e98-5f99-486b-9723-51aed43b97b6/Vivado/Vivado/2016.4/bin/unwrapped/lnx64.o/xelab -wto 2a3a843ae2804f1a9cdb45297ed699b2 --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot dds_tb_behav xil_defaultlib.dds_tb -log elaborate.log 
+Running: /mnt/685a0e98-5f99-486b-9723-51aed43b97b6/Vivado/Vivado/2016.4/bin/unwrapped/lnx64.o/xelab -wto 2a3a843ae2804f1a9cdb45297ed699b2 --debug typical --relax --mt 8 -L xil_defaultlib -L secureip -L xpm --snapshot dds_tb_behav xil_defaultlib.dds_tb -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -15,6 +15,7 @@ Compiling package ieee.std_logic_unsigned
 Compiling package ieee.numeric_std
 Compiling package ieee.std_logic_signed
 Compiling architecture behavioral of entity xil_defaultlib.luts [luts_default]
+Compiling architecture luts_0_arch of entity xil_defaultlib.luts_0 [luts_0_default]
 Compiling architecture behavioral of entity xil_defaultlib.mul_acc [mul_acc_default]
 Compiling architecture behavioral of entity xil_defaultlib.dds_sin_cos [dds_sin_cos_default]
 Compiling architecture behavioral of entity xil_defaultlib.dds_tb

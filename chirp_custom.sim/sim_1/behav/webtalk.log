@@ -2,13 +2,13 @@
 # Webtalk v2016.4 (64-bit)
 # SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
 # IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
-# Start of session at: Wed May 24 16:43:41 2017
-# Process ID: 40236
+# Start of session at: Tue May 30 09:44:42 2017
+# Process ID: 2690
 # Current directory: /home/marco/chirp_custom/chirp_custom.sim/sim_1/behav
 # Command line: wbtcv -mode batch -source /home/marco/chirp_custom/chirp_custom.sim/sim_1/behav/xsim.dir/dds_tb_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: /home/marco/chirp_custom/chirp_custom.sim/sim_1/behav/webtalk.log
 # Journal file: /home/marco/chirp_custom/chirp_custom.sim/sim_1/behav/webtalk.jou
 #-----------------------------------------------------------
 source /home/marco/chirp_custom/chirp_custom.sim/sim_1/behav/xsim.dir/dds_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] '/home/marco/chirp_custom/chirp_custom.sim/sim_1/behav/xsim.dir/dds_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed May 24 16:43:45 2017. For additional details about this file, please refer to the WebTalk help file at /mnt/685a0e98-5f99-486b-9723-51aed43b97b6/Vivado/Vivado/2016.4/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Wed May 24 16:43:45 2017...
+webtalk_transmit: Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:07 . Memory (MB): peak = 213.777 ; gain = 0.000 ; free physical = 1889 ; free virtual = 3953
+INFO: [Common 17-206] Exiting Webtalk at Tue May 30 09:44:49 2017...

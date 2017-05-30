@@ -1,6 +1,7 @@
 # compile vhdl design source files
+vhdl xil_defaultlib  "../../../chirp_custom.srcs/sources_1/ip/luts_0/luts.vhd"
+vhdl xil_defaultlib  "../../../chirp_custom.srcs/sources_1/ip/luts_0/sim/luts_0.vhd"
 vhdl xil_defaultlib  "../../../chirp_custom.srcs/sources_1/new/mul_acc.vhd"
-vhdl xil_defaultlib  "../../../chirp_custom.srcs/sources_1/new/luts.vhd"
 vhdl xil_defaultlib  "../../../chirp_custom.srcs/sources_1/new/dds_sin_cos.vhd"
 vhdl xil_defaultlib  "../../../chirp_custom.srcs/sim_1/new/dds_tb.vhd"
 
