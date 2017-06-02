@@ -8,18 +8,18 @@ entity mul_acc is
          
          address : std_logic_vector(15 downto 0); --stesso address per seno e coseno
                  
-         sin_coarse_data : in std_logic_vector(31 downto 0);
-         cos_coarse_data : in std_logic_vector(31 downto 0);
-         sin_fine_data   : in std_logic_vector(31 downto 0);
-         cos_fine_data   : in std_logic_vector(31 downto 0);
+         sin_coarse_data : in std_logic_vector(15 downto 0);
+         cos_coarse_data : in std_logic_vector(15 downto 0);
+         sin_fine_data   : in std_logic_vector(15 downto 0);
+         cos_fine_data   : in std_logic_vector(15 downto 0);
          
          sin_coarse_add  : out std_logic_vector(7 downto 0);
          cos_coarse_add  : out std_logic_vector(7 downto 0);
          sin_fine_add    : out std_logic_vector(7 downto 0);
          cos_fine_add    : out std_logic_vector(7 downto 0);
   
-         sin_data : out std_logic_vector(63 downto 0);
-         cos_data : out std_logic_vector(63 downto 0)
+         sin_data : out std_logic_vector(31 downto 0);
+         cos_data : out std_logic_vector(31 downto 0)
   
    );
    
@@ -27,18 +27,18 @@ end mul_acc;
 
 architecture Behavioral of mul_acc is
 
-signal sin_a : std_logic_vector (31 downto 0) := (others => '0');
-signal sin_b : std_logic_vector (31 downto 0) := (others => '0');
-signal cos_a : std_logic_vector (31 downto 0) := (others => '0');
-signal cos_b : std_logic_vector (31 downto 0) := (others => '0');
+signal sin_a : std_logic_vector (15 downto 0) := (others => '0');
+signal sin_b : std_logic_vector (15 downto 0) := (others => '0');
+signal cos_a : std_logic_vector (15 downto 0) := (others => '0');
+signal cos_b : std_logic_vector (15 downto 0) := (others => '0');
 
-signal sin_partial_prod_1 : std_logic_vector(63 downto 0);
-signal sin_partial_prod_2 : std_logic_vector(63 downto 0);
-signal cos_partial_prod_1 : std_logic_vector(63 downto 0);
-signal cos_partial_prod_2 : std_logic_vector(63 downto 0);
+signal sin_partial_prod_1 : std_logic_vector(31 downto 0);
+signal sin_partial_prod_2 : std_logic_vector(31 downto 0);
+signal cos_partial_prod_1 : std_logic_vector(31 downto 0);
+signal cos_partial_prod_2 : std_logic_vector(31 downto 0);
 
-signal sin_data_s : std_logic_vector (63 downto 0);
-signal cos_data_s : std_logic_vector (63 downto 0);
+signal sin_data_s : std_logic_vector (31 downto 0);
+signal cos_data_s : std_logic_vector (31 downto 0);
 
 
 
@@ -71,12 +71,12 @@ begin
     process (sin_partial_prod_1, sin_partial_prod_2, cos_partial_prod_1, cos_partial_prod_2)
     begin
         
-        sin_data_s <= sin_partial_prod_1(63 downto 0) + sin_partial_prod_2(63 downto 0);
-        cos_data_s <= cos_partial_prod_1(63 downto 0) - cos_partial_prod_2(63 downto 0);
+        sin_data_s <= sin_partial_prod_1(31 downto 0) + sin_partial_prod_2(31 downto 0);
+        cos_data_s <= cos_partial_prod_1(31 downto 0) - cos_partial_prod_2(31 downto 0);
 
     end process;
     
-    sin_data <= sin_data_s(63 downto 0);
-    cos_data <= cos_data_s(63 downto 0);
+    sin_data <= sin_data_s(31 downto 0);
+    cos_data <= cos_data_s(31 downto 0);
  
 end Behavioral;

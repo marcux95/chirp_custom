@@ -8,8 +8,8 @@ entity dds_sin_cos is
          
          address : in std_logic_vector(15 downto 0);
          
-         sin_data : out std_logic_vector (63 downto 0);
-         cos_data : out std_logic_vector (63 downto 0)
+         sin_data : out std_logic_vector (31 downto 0);
+         cos_data : out std_logic_vector (31 downto 0)
   
   );
   
@@ -21,10 +21,10 @@ signal sin_coarse_add_s : std_logic_vector (7 downto 0);
 signal cos_coarse_add_s : std_logic_vector (7 downto 0);
 signal sin_fine_add_s   : std_logic_vector (7 downto 0);
 signal cos_fine_add_s   : std_logic_vector (7 downto 0);
-signal sin_coarse_data_s : std_logic_vector (31 downto 0);
-signal cos_coarse_data_s : std_logic_vector (31 downto 0);
-signal sin_fine_data_s   : std_logic_vector (31 downto 0);
-signal cos_fine_data_s   : std_logic_vector (31 downto 0);
+signal sin_coarse_data_s : std_logic_vector (15 downto 0);
+signal cos_coarse_data_s : std_logic_vector (15 downto 0);
+signal sin_fine_data_s   : std_logic_vector (15 downto 0);
+signal cos_fine_data_s   : std_logic_vector (15 downto 0);
 
 begin
 

@@ -4,8 +4,8 @@ use IEEE.std_logic_unsigned.all;
 
 entity dds_tb is
   Port ( 
-        sin_data : out std_logic_vector (63 downto 0);
-        cos_data : out std_logic_vector (63 downto 0)
+        sin_data : out std_logic_vector (31 downto 0);
+        cos_data : out std_logic_vector (31 downto 0)
        
   );
   
@@ -14,8 +14,9 @@ end dds_tb;
 architecture Behavioral of dds_tb is
 
 signal clk : std_logic := '0';
-signal straigth_counter : std_logic_vector (7 downto 0) := (others => '0');
-signal address : std_logic_vector (15 downto 0) := (others => '0');
+signal straigth_counter : std_logic_vector (15 downto 0) := (others => '0');
+signal address : std_logic_vector (31 downto 0) := (others => '0');
+signal address_s : std_logic_vector (15 downto 0) := (others => '0');
 
 begin
 
@@ -32,10 +33,12 @@ process(clk)
 begin
     if rising_edge(clk) then
     
-        address <= address + 1;
+        straigth_counter <= straigth_counter + 1;
+        address_s <= straigth_counter * straigth_counter;
+        
         
     end if;
     end process;
     
-
+    address <= address_s(15 downto 0);
 end Behavioral;

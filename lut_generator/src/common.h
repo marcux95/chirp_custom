@@ -8,6 +8,7 @@
 #define M_BITS 16 //Total bits
 #define F_BITS 8 // coarse bits
 #define I_BITS 8 // fine bits
+#define DAC 16
 
 FILE *sin_coarse_ptr, *cos_coarse_ptr;
 FILE *sin_fine_ptr, *cos_fine_ptr;

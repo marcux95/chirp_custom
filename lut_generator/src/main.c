@@ -41,7 +41,8 @@ int main() {
     
     tmp = cos(spanner);
 
-    fprintf (cos_coarse_ptr, "%d,\n", (int)(tmp*(pow(2, 16)-1)));
+    if (tmp < 0) fprintf (cos_coarse_ptr, "%d,\n", (int)(tmp*(pow(2, DAC-1))));
+    else fprintf (cos_coarse_ptr, "%d,\n", (int)(tmp*(pow(2, DAC-1)-1)));
 
     spanner += coarse_inc;
 
@@ -53,7 +54,8 @@ int main() {
     
     tmp = sin(spanner);
 
-    fprintf (sin_coarse_ptr, "%d,\n", (int)(tmp*(pow(2,16)-1)));
+    if (tmp < 0) fprintf (sin_coarse_ptr, "%d,\n", (int)(tmp*(pow(2, DAC-1))));
+    else fprintf (sin_coarse_ptr, "%d,\n", (int)(tmp*(pow(2, DAC-1)-1)));
     spanner += coarse_inc;
 
   } 
@@ -64,7 +66,8 @@ int main() {
     
     tmp = cos(spanner);
 
-    fprintf (cos_fine_ptr, "%d,\n", (int)(tmp*(pow(2,16)-1)));
+    if (tmp < 0) fprintf (cos_fine_ptr, "%d,\n", (int)(tmp*(pow(2, DAC-1))));
+    else fprintf (cos_fine_ptr, "%d,\n", (int)(tmp*(pow(2, DAC-1)-1)));
 
     spanner += fine_inc;
 
@@ -76,7 +79,8 @@ int main() {
     
     tmp = sin(spanner);
 
-    fprintf (sin_fine_ptr, "%d,\n", (int)(tmp*(pow(2,16)-1)));
+    if (tmp < 0) fprintf (sin_fine_ptr, "%d,\n", (int)(tmp*(pow(2, DAC-1))));
+    else fprintf (sin_fine_ptr, "%d,\n", (int)(tmp*(pow(2, DAC-1)-1)));
 
     spanner += fine_inc;
 
